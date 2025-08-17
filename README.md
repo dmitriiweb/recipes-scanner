@@ -107,4 +107,4 @@ For a crisp base, preheat a pizza stone.
 ---
 
 ## License
-MIT (or update to your preferred license).
+MIT 
