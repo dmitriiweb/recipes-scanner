@@ -1,15 +1,15 @@
 from .args import get_args
+from .pdf_scanner import pdf_to_images
+from loguru import logger
+
 
 
 def main():
     args = get_args()
-    print(f"Input file: {args.input}")
-    print(f"Output folder: {args.output_folder}")
-    print(f"Model: {args.model}")
-    print(f"Language: {args.language}")
-    print(f"Temperature: {args.temperature}")
-    print(f"API Key: {args.api_key}")
-    print(f"API Base URL: {args.api_base_url}")
+
+    logger.info(f"Converting {args.input} to images...")
+    images = pdf_to_images(args.input)
+    logger.info(f"Converted {len(images)} pages to images")
 
 
 if __name__ == "__main__":
